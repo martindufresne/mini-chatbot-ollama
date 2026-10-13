@@ -3,8 +3,12 @@ const path = require('path');
 
 const app = express();
 const port = process.env.PORT || 3000;
-const OLLAMA_HOST = process.env.OLLAMA_HOST || 'http://127.0.0.1:11434';
+const rawHost = process.env.OLLAMA_BASE_URL || process.env.OLLAMA_HOST || '127.0.0.1:11434';
+const OLLAMA_HOST = rawHost.startsWith('http://') || rawHost.startsWith('https://')
+  ? rawHost
+  : `http://${rawHost}`;
 const MODEL_NAME = process.env.MODEL_NAME || 'qwen2.5:0.5b';
+
 
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
