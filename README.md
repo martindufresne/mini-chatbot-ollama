@@ -29,8 +29,9 @@ Ce montage est specialement calibre pour respecter les limites strictes du plan 
 │   ├── style.css               # Mise en page et styles
 │   └── app.js                  # Logique de clavardage et gestion du flux
 └── cours/                      # Documents pedagogiques
-    ├── notes_de_cours.md       # Guide detaille a l'intention de l'enseignant
-    └── cahier_du_participant.md # Guide pas-a-pas pour les etudiants
+    ├── cahier_du_participant.md # Guide pas-a-pas pour les etudiants
+    └── cahier_du_participant.pdf # Version PDF du guide etudiant
+
 ```
 
 ---

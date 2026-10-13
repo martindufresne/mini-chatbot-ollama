@@ -1,3 +1,7 @@
 node_modules/
 .DS_Store
 npm-debug.log*
+
+# Notes de l'enseignant (reservees au formateur)
+cours/notes_de_cours.md
+cours/notes_de_cours.pdf
