@@ -1,0 +1,222 @@
+:root {
+  --couleur-fond: #f4f6f8;
+  --couleur-carte: #ffffff;
+  --couleur-texte: #1e293b;
+  --couleur-texte-secondaire: #64748b;
+  --couleur-bordure: #e2e8f0;
+  --couleur-primaire: #0284c7;
+  --couleur-primaire-survol: #0369a1;
+  --couleur-bulle-usager: #0284c7;
+  --couleur-bulle-ia: #ffffff;
+  --couleur-bulle-systeme: #f1f5f9;
+  --couleur-succes: #16a34a;
+  --couleur-avertissement: #eab308;
+  --couleur-erreur: #dc2626;
+  --rayon-bordure: 8px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--couleur-fond);
+  color: var(--couleur-texte);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 16px;
+}
+
+.conteneur-application {
+  width: 100%;
+  max-width: 850px;
+  height: 90vh;
+  background-color: var(--couleur-carte);
+  border-radius: var(--rayon-bordure);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid var(--couleur-bordure);
+}
+
+.en-tete {
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--couleur-bordure);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+}
+
+.titre-zone h1 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--couleur-texte);
+}
+
+.sous-titre {
+  font-size: 0.85rem;
+  color: var(--couleur-texte-secondaire);
+  margin-top: 2px;
+}
+
+.indicateur-statut {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  padding: 6px 12px;
+  background-color: #f8fafc;
+  border-radius: 20px;
+  border: 1px solid var(--couleur-bordure);
+}
+
+.pastille {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--couleur-avertissement);
+  display: inline-block;
+}
+
+.pastille.actif {
+  background-color: var(--couleur-succes);
+}
+
+.pastille.erreur {
+  background-color: var(--couleur-erreur);
+}
+
+.zone-discussion {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background-color: #fafbfc;
+}
+
+.message {
+  display: flex;
+  flex-direction: column;
+  max-width: 80%;
+}
+
+.message.usager {
+  align-self: flex-end;
+}
+
+.message.assistant {
+  align-self: flex-start;
+}
+
+.message.systeme {
+  align-self: center;
+  max-width: 90%;
+}
+
+.message .auteur {
+  font-size: 0.75rem;
+  color: var(--couleur-texte-secondaire);
+  margin-bottom: 4px;
+}
+
+.message.usager .auteur {
+  text-align: right;
+}
+
+.bulle {
+  padding: 12px 16px;
+  border-radius: var(--rayon-bordure);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.message.usager .bulle {
+  background-color: var(--couleur-bulle-usager);
+  color: #ffffff;
+  border-bottom-right-radius: 2px;
+}
+
+.message.assistant .bulle {
+  background-color: var(--couleur-bulle-ia);
+  color: var(--couleur-texte);
+  border: 1px solid var(--couleur-bordure);
+  border-bottom-left-radius: 2px;
+}
+
+.message.systeme .bulle {
+  background-color: var(--couleur-bulle-systeme);
+  color: var(--couleur-texte-secondaire);
+  border: 1px solid var(--couleur-bordure);
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+.zone-saisie {
+  padding: 16px 20px;
+  border-top: 1px solid var(--couleur-bordure);
+  background-color: #ffffff;
+}
+
+.formulaire-saisie {
+  display: flex;
+  gap: 10px;
+  align-items: flex-end;
+}
+
+textarea#champMessage {
+  flex: 1;
+  padding: 10px 14px;
+  border: 1px solid var(--couleur-bordure);
+  border-radius: var(--rayon-bordure);
+  font-size: 0.95rem;
+  font-family: inherit;
+  resize: none;
+  min-height: 44px;
+  max-height: 120px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+textarea#champMessage:focus {
+  border-color: var(--couleur-primaire);
+}
+
+button#boutonEnvoyer {
+  padding: 10px 20px;
+  background-color: var(--couleur-primaire);
+  color: #ffffff;
+  border: none;
+  border-radius: var(--rayon-bordure);
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  height: 44px;
+  transition: background-color 0.2s;
+}
+
+button#boutonEnvoyer:hover:not(:disabled) {
+  background-color: var(--couleur-primaire-survol);
+}
+
+button#boutonEnvoyer:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pied-page-info {
+  margin-top: 8px;
+  text-align: center;
+  font-size: 0.75rem;
+  color: var(--couleur-texte-secondaire);
+}

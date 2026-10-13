@@ -1,0 +1,167 @@
+@page {
+  size: letter portrait;
+  margin: 20mm 18mm 20mm 18mm;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 10pt;
+  line-height: 1.55;
+  color: #1e293b;
+  background-color: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+
+/* Titres */
+h1 {
+  font-size: 18pt;
+  font-weight: 700;
+  color: #0f172a;
+  border-bottom: 2px solid #0284c7;
+  padding-bottom: 6px;
+  margin-top: 0;
+  margin-bottom: 14pt;
+  page-break-after: avoid;
+}
+
+h2 {
+  font-size: 13pt;
+  font-weight: 600;
+  color: #0369a1;
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 4px;
+  margin-top: 18pt;
+  margin-bottom: 8pt;
+  page-break-after: avoid;
+}
+
+h3 {
+  font-size: 11pt;
+  font-weight: 600;
+  color: #0f172a;
+  margin-top: 12pt;
+  margin-bottom: 6pt;
+  page-break-after: avoid;
+}
+
+h4 {
+  font-size: 10pt;
+  font-weight: 600;
+  color: #334155;
+  margin-top: 10pt;
+  margin-bottom: 4pt;
+  page-break-after: avoid;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 8pt;
+  text-align: justify;
+}
+
+/* Listes */
+ul, ol {
+  margin-top: 0;
+  margin-bottom: 8pt;
+  padding-left: 18pt;
+}
+
+li {
+  margin-bottom: 3pt;
+}
+
+li > p {
+  margin-bottom: 3pt;
+}
+
+/* Blocs de code et sorties textuelles */
+pre {
+  background-color: #f8fafc;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  padding: 8pt 10pt;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 8pt;
+  line-height: 1.4;
+  color: #0f172a;
+  overflow-x: hidden;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  page-break-inside: avoid;
+  margin-top: 6pt;
+  margin-bottom: 10pt;
+}
+
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 8.5pt;
+  background-color: #f1f5f9;
+  color: #0f172a;
+  padding: 2px 4px;
+  border-radius: 4px;
+  border: 1px solid #e2e8f0;
+}
+
+pre code {
+  background-color: transparent;
+  padding: 0;
+  border: none;
+  font-size: inherit;
+  color: inherit;
+}
+
+/* Citations et notes */
+blockquote {
+  border-left: 4px solid #0284c7;
+  background-color: #f0f9ff;
+  color: #0369a1;
+  margin: 10pt 0;
+  padding: 6pt 12pt;
+  border-radius: 0 4px 4px 0;
+  page-break-inside: avoid;
+}
+
+blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+/* Tableaux */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 8pt;
+  margin-bottom: 12pt;
+  font-size: 9pt;
+  page-break-inside: avoid;
+}
+
+th, td {
+  border: 1px solid #cbd5e1;
+  padding: 5pt 8pt;
+  text-align: left;
+}
+
+th {
+  background-color: #f1f5f9;
+  color: #0f172a;
+  font-weight: 600;
+}
+
+tr:nth-child(even) td {
+  background-color: #f8fafc;
+}
+
+/* Lignes horizontales */
+hr {
+  border: 0;
+  height: 1px;
+  background: #cbd5e1;
+  margin: 16pt 0;
+}
+
+/* Liens */
+a {
+  color: #0284c7;
+  text-decoration: none;
+}

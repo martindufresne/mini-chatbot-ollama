@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr-CA">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assistant de clavardage local</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="conteneur-application">
+    <header class="en-tete">
+      <div class="titre-zone">
+        <h1>Assistant virtuel</h1>
+        <p class="sous-titre">Modele qwen2.5:0.5b conteneurise avec Ollama et Node.js</p>
+      </div>
+      <div class="indicateur-statut" id="indicateurStatut">
+        <span class="pastille" id="pastilleStatut"></span>
+        <span class="texte-statut" id="texteStatut">Verification de la connexion...</span>
+      </div>
+    </header>
+
+    <main class="zone-discussion" id="zoneDiscussion">
+      <div class="message systeme">
+        <div class="bulle">
+          Bienvenue. Vous pouvez poser une question au modele Qwen 2.5 (0.5B) execute localement dans ce conteneur.
+        </div>
+      </div>
+    </main>
+
+    <footer class="zone-saisie">
+      <form id="formulaireMessage" class="formulaire-saisie">
+        <textarea
+          id="champMessage"
+          placeholder="Ecrivez votre message ici... (Entree pour envoyer, Maj+Entree pour un saut de ligne)"
+          rows="1"
+          required
+        ></textarea>
+        <button type="submit" id="boutonEnvoyer">Envoyer</button>
+      </form>
+      <div class="pied-page-info">
+        <span>Environnement d'apprentissage &bull; Deploiement conteneurise Render</span>
+      </div>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

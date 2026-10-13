@@ -1,0 +1,12 @@
+{
+  "name": "mini-chatbot-ollama",
+  "version": "1.0.0",
+  "description": "Mini application de clavardage autonome combinant Node.js et Ollama dans un conteneur Docker",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.1"
+  }
+}
